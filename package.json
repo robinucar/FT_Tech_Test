@@ -14,11 +14,13 @@
     "test": "jest --env=node",
     "build:client": "webpack --watch",
     "server": "nodemon app.js",
-    "start": "rm -rf dist && npm-run-all --parallel build:client server"
+    "start": "rm -rf dist && npm-run-all --parallel build:client server",
+    "remove-jsdoc": "node remove-jsdoc.js"
   },
   "author": "Financial Times Ltd.",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.17.3",
     "express-handlebars": "^6.0.2",
     "react": "^18.2.0",
@@ -30,13 +32,21 @@
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
     "file-loader": "^6.2.0",
+    "husky": "^9.1.1",
     "jest": "^27.5.1",
+    "jest-fetch-mock": "^3.0.3",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.3",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "supertest": "^6.2.2",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run remove-jsdoc"
+    }
   }
 }

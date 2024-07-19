@@ -160,4 +160,10 @@ In this tech test, the goal is to display specific information from the market s
   ![My MVC Graph](assest/my_approach.png)
 
 As it has been seen from the graph, I follow the Model-View-Controller (MVC) architecture to reach my goal.
-I will write as many unit tests as I can to demonstrate my testing skills and create several classes to showcase my OOP (Object-Oriented Programming) skills. For the UI, I aim to create a pixel-perfect, responsive, progressive, and accessible application, as shown in the above picture [Click here to view the screenshot of an example securities data component](https://user-images.githubusercontent.com/51677/67555386-b6c5fc80-f700-11e9-86bd-55e975be0441.png).
+I will write as many unit tests as I can to demonstrate my testing skills and create several classes to showcase my OOP (Object-Oriented Programming) skills. For the UI, I aim to create a pixel-perfect, responsive, progressive, and accessible application, as shown in the above picture which shows an example securities data component. I will also generate JSDoc documentation for classes and methods details.
+
+- Step1)
+  - Create an ApiUrl model. This model should be reusable, meaning it can accept any URL and parameters and successfully retrieve and format the data.
+  - Create a separate helper method for formatting each item of data, which can be used within the class when instances are created.
+  - Create Custom Error to handle errors.
+  - Write unit test for model, helper method and errors.
