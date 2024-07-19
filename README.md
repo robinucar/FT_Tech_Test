@@ -220,3 +220,32 @@ npm test
 ```
 
 ![ Tests & Coverage ](assest/code_coverage.png)
+
+## Improvements:
+
+### Client Side:
+
+- Implement JSX templates for improved component rendering.
+- Enable viewing detailed market data when clicking individual data entries.
+- Enhance error styling for better user experience.
+
+### Server Side:
+
+- Create routers to better organize and manage API endpoints.
+- Implement a centralized error handling middleware to manage all errors consistently.
+
+### Testing:
+
+- Enhance unit tests to achieve 100% code coverage.
+- Develop integration tests to ensure different parts of the application work together as expected.
+- Write end-to-end tests to simulate real user scenarios and ensure the application behaves as intended.
+
+### DevOps:
+
+- Deployment Strategy: Implement Blue-Green or Canary Deployment for safer releases.
+- CI/CD Pipeline: Create a CI/CD pipeline to automate the build, test, and deployment processes.
+- Containerization: Dockerize the application using Docker for consistent development and production environments.
+- Kubernetes Integration: Use Kubernetes for container orchestration to manage application scalability and availability.
+- Cloud Deployment: Deploy the application on cloud platforms such as AWS, Azure, or Heroku.
+- Infrastructure as Code: Use tools like Terraform or Ansible to manage infrastructure in a declarative manner.
+- Monitoring: Integrate monitoring tools like Grafana, Datadog, or Prometheus to keep track of the application's health and performance.
