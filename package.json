@@ -16,7 +16,7 @@
     "server": "nodemon app.js",
     "start": "rm -rf dist && npm-run-all --parallel watch-css build:client server",
     "build-css": "node-sass src/css/styles.scss public/css/styles.css",
-    "watch-css": "node-sass src/styles.scss public/styles.css --watch"
+    "watch-css": "node-sass src/css/styles.scss public/styles.css --watch"
   },
   "author": "Financial Times Ltd.",
   "license": "MIT",
