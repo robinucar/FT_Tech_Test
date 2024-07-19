@@ -171,6 +171,12 @@ I will write as many unit tests as I can to demonstrate my testing skills and cr
 
 ### Step 2)
 
-- Create a Data Controller: The data controller getMarketData method is responsible for fetching and formatting market data from an FT Market API. It first checks for the required environment variables (FT_MARKET_API_URL and FT_MARKET_SYMBOLS) and throwing a ValidationError if either is missing or wrong. If there is not any issue data controller communicate with ApiModel to fetch the data and format it before returning the formatted data. In case of any errors during the process, it handles them using the handleError function.
+- Create a Data Controller: The data controller getMarketData method is responsible for fetching and formatting market data from an FT Market API. It first checks for the required environment variables (FT_MARKET_API_URL and FT_MARKET_SYMBOLS) and throwing a ValidationError if either is missing or wrong. If there is not any issue data controller communicate with ApiModel to fetch the data and format it before returning the formatted data. In case of any errors during the process, it handles them using the handleError function.Normally, we could define the routers in the controller as well. However, I did not do this because the middlewares are already declared in the app.js. I didn't want to modify the code that was already provided.
 - Create a .env file to store information Api Url, Symbols and also Port values. NORMALLY this file should not be pushed to Github. But because of this is a tech test in case of cloning repo and running directly it will be pushed to Github this time.
 - Write Unit Test for Data Controller
+
+### Step3)
+
+- Print data to the console: In this step, the data controller is implemented in app.js to log data to the console. Within the route for GET requests to /handlebars, the app fetches market data using dataController.getMarketData, renders the home Handlebars template with the fetched data, and logs this data to the console. If an error occurs during data fetching or rendering, it is caught and handled using the handleError function.
+
+![ Data on the Console ](assest/console-data.png)
