@@ -149,7 +149,15 @@ CONDITIONALS
 
 Full docs: https://handlebarsjs.com/guide/
 
-My Approach
+## My Approach - Robin Winters -
 
-- I firstly tested the api output on the postman.
-- Second step is to run api output on the console.
+- Send Request to FT Markets Data API: I first sent a request to the FT Markets Data API to view the output via Postman.
+  ![Request to API via Postman](assest/postman_req.png)
+
+In this tech test, the goal is to display specific information from the market stocks API response. Specifically, we need to extract and show only the name and change1DayPercent values for each stock. Additionally, we need to format the name as shown on the FT website, adjust the color of the change1DayPercent value based on whether it's positive or negative, and round change1DayPercent to two decimal places.
+
+- This is my Graph:
+  ![My MVC Graph](assest/my_approach.png)
+
+As it has been seen from the graph, I follow the Model-View-Controller (MVC) architecture to reach my goal.
+I will write as many unit tests as I can to demonstrate my testing skills and create several classes to showcase my OOP (Object-Oriented Programming) skills. For the UI, I aim to create a pixel-perfect, responsive, progressive, and accessible application, as shown in the above picture [Click here to view the screenshot of an example securities data component](https://user-images.githubusercontent.com/51677/67555386-b6c5fc80-f700-11e9-86bd-55e975be0441.png).
