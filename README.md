@@ -162,8 +162,15 @@ In this tech test, the goal is to display specific information from the market s
 As it has been seen from the graph, I follow the Model-View-Controller (MVC) architecture to reach my goal.
 I will write as many unit tests as I can to demonstrate my testing skills and create several classes to showcase my OOP (Object-Oriented Programming) skills. For the UI, I aim to create a pixel-perfect, responsive, progressive, and accessible application, as shown in the above picture which shows an example securities data component. I will also generate JSDoc documentation for classes and methods details.
 
-- Step1)
-  - Create an ApiUrl model. This model should be reusable, meaning it can accept any URL and parameters and successfully retrieve and format the data.
-  - Create a separate helper method for formatting each item of data, which can be used within the class when instances are created.
-  - Create Custom Error to handle errors.
-  - Write unit test for model, helper method and errors.
+### Step1)
+
+- Create an ApiUrl model. This model should be reusable, meaning it can accept any URL and parameters and successfully retrieve and format the data.
+- Create a separate helper method for formatting each item of data, which can be used within the class when instances are created.
+- Create Custom Error to handle errors.
+- Write unit test for model, helper method and errors.
+
+### Step 2)
+
+- Create a Data Controller: The data controller getMarketData method is responsible for fetching and formatting market data from an FT Market API. It first checks for the required environment variables (FT_MARKET_API_URL and FT_MARKET_SYMBOLS) and throwing a ValidationError if either is missing or wrong. If there is not any issue data controller communicate with ApiModel to fetch the data and format it before returning the formatted data. In case of any errors during the process, it handles them using the handleError function.
+- Create a .env file to store information Api Url, Symbols and also Port values. NORMALLY this file should not be pushed to Github. But because of this is a tech test in case of cloning repo and running directly it will be pushed to Github this time.
+- Write Unit Test for Data Controller

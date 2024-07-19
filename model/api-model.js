@@ -1,20 +1,11 @@
-require('dotenv').config();
-
-
 const { FetchError } = require('../error/errors');
-
-
 const { formatItem } = require('../helper/format-item');
-
-
 class ApiModel {
-  
   constructor(url, params) {
     this.url = url;
     this.params = params;
   }
 
-  
   async getData() {
     const requestParams = {
       symbols: this.params,
@@ -34,7 +25,6 @@ class ApiModel {
     return result;
   }
 
-  
   filterAndFormatData(data) {
     const items = data.data.items;
     return items.map(formatItem);
@@ -42,5 +32,3 @@ class ApiModel {
 }
 
 module.exports = ApiModel;
-
-
