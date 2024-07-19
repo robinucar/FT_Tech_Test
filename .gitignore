@@ -4,3 +4,4 @@ docs
 remove-jsdoc.js
 .prettierrc
 jsdoc.json
+coverage
