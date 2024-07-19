@@ -20,6 +20,10 @@ class ApiModel {
    * Creates an instance of ApiModel.
    * @param {string} url - The URL of the API endpoint.
    * @param {Object} params - The parameters for the API request.
+   * @example
+   * const api = new ApiModel('https://api.example.com/data', { param1: 'value1' });
+   * console.log(api.url); // 'https://api.example.com/data'
+   * console.log(api.params); // { param1: 'value1' }
    */
   constructor(url, params) {
     this.url = url;
@@ -30,6 +34,14 @@ class ApiModel {
    * Fetches data from the API.
    * @returns {Promise<Object>} The data returned from the API.
    * @throws {FetchError} If the network response is not successful.
+   * @example
+   * api.getData()
+   *   .then(data => {
+   *     console.log(data);
+   *   })
+   *   .catch(error => {
+   *     console.error('Error fetching data:', error);
+   *   });
    */
   async getData() {
     const requestParams = {
@@ -54,6 +66,15 @@ class ApiModel {
    * Filters and formats the API data.
    * @param {Object} data - The data returned from the API.
    * @returns {Array} The formatted data items.
+   * @example
+   * api.getData()
+   *   .then(data => {
+   *     const formattedData = api.filterAndFormatData(data);
+   *     console.log(formattedData);
+   *   })
+   *   .catch(error => {
+   *     console.error('Error fetching data:', error);
+   *   });
    */
   filterAndFormatData(data) {
     const items = data.data.items;

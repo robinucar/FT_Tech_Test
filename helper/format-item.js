@@ -18,6 +18,16 @@ const nameMapping = {
  * @param {Object} item.quote - Quote information of the item.
  * @param {number} item.quote.change1DayPercent - The daily change percentage.
  * @returns {Object} The formatted item with name, daily change, and negativity flag.
+ * @example
+ * const { formatItem } = require('./path/to/format-item');
+ *
+ * const item = {
+ *   basic: { name: 'FTSE 100 Index' },
+ *   quote: { change1DayPercent: 1.23 }
+ * };
+ *
+ * const formattedItem = formatItem(item);
+ * console.log(formattedItem);
  */
 const formatItem = item => {
   const name = nameMapping[item.basic.name] || item.basic.name;
@@ -35,18 +45,3 @@ const formatItem = item => {
 module.exports = {
   formatItem,
 };
-
-/**
- * Example usage:
- *
- * const { formatItem } = require('./path/to/format-item');
- *
- * const item = {
- *   basic: { name: 'FTSE 100 Index' },
- *   quote: { change1DayPercent: 1.23 }
- * };
- *
- * const formattedItem = formatItem(item);
- * console.log(formattedItem);
- *
- */
