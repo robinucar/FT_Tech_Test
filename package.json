@@ -11,13 +11,12 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "jest --env=node",
+    "test": "jest --env=node --coverage",
     "build:client": "webpack --watch",
     "server": "nodemon app.js",
-    "start": "rm -rf dist && npm-run-all --parallel build:client server",
-    "generate-jsdoc": "jsdoc -c jsdoc.json",
-    "remove-jsdoc": "node remove-jsdoc.js",
-    "prepare": "husky install"
+    "start": "rm -rf dist && npm-run-all --parallel watch-css build:client server",
+    "build-css": "node-sass src/css/styles.scss public/css/styles.css",
+    "watch-css": "node-sass src/styles.scss public/styles.css --watch"
   },
   "author": "Financial Times Ltd.",
   "license": "MIT",
@@ -33,13 +32,13 @@
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
-    "docdash": "^2.0.2",
     "file-loader": "^6.2.0",
     "husky": "^9.1.1",
     "jest": "^27.5.1",
     "jest-fetch-mock": "^3.0.3",
     "jsdoc": "^4.0.3",
     "jsdoc-to-markdown": "^8.0.1",
+    "node-sass": "^7.0.3",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
@@ -48,10 +47,5 @@
     "supertest": "^6.2.2",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run remove-jsdoc"
-    }
   }
 }

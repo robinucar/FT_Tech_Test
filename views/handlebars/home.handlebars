@@ -1,2 +1,43 @@
-<h1>{{pageTitle}}</h1>
-<p>{{content}}</p>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    
+    <link
+      rel='stylesheet'
+      href='https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-colors@,o-ft-affiliate-ribbon@,o-typography@,o-grid@^6.0.0,o-editorial-typography@&brand=core&system_code=test'
+    >
+    <link rel='stylesheet' href='../../public/css/styles.css'>
+    <title>Financial Times</title>
+  </head>
+  <body class='o-colors-page-background'>
+    <div class='o-typography-wrapper'>
+      <header
+        class='o-typography-heading-level-1'
+        role='banner'
+        aria-label='Main Header'
+      >
+        Financial Times
+      </header>
+      <main>
+        <section
+          class='o-ft-affiliate-ribbon'
+          role='region'
+          aria-labelledby='market-data'
+        >
+          <ul class='o-typography-list o-typography-list--bare inline-list'>
+            {{#each data}}
+              <li class='o-layout-inline__item'>
+                <a
+                  href='#'
+                  class='o-typography-link'
+                  aria-label='{{name}}, {{dailyChange}}'
+                >{{name}}<span class="daily-change {{#if isNegative}}negative-change{{else}}positive-change{{/if}}">{{dailyChange}}</span></a>
+              </li>
+            {{/each}}
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

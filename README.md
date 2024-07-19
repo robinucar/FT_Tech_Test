@@ -175,8 +175,48 @@ I will write as many unit tests as I can to demonstrate my testing skills and cr
 - Create a .env file to store information Api Url, Symbols and also Port values. NORMALLY this file should not be pushed to Github. But because of this is a tech test in case of cloning repo and running directly it will be pushed to Github this time.
 - Write Unit Test for Data Controller
 
-### Step3)
+### Step 3)
 
 - Print data to the console: In this step, the data controller is implemented in app.js to log data to the console. Within the route for GET requests to /handlebars, the app fetches market data using dataController.getMarketData, renders the home Handlebars template with the fetched data, and logs this data to the console. If an error occurs during data fetching or rendering, it is caught and handled using the handleError function.
 
 ![ Data on the Console ](assest/console-data.png)
+
+- The isNegative property is printed to the console, but it will be used to style the dailyChange data in the next step. Therefore, this property will not be visible in the browser.
+
+### Step 4)
+
+- In this step, formatted data is displayed on the console. Origami components (Origami Build Service), along with custom styling where necessary, are used for styling. The data is displayed using a Handlebars template.
+
+- Develop unit test for UI.
+
+## How to run this Application
+
+- Clone this repo and run npm install to install all packages:
+
+```
+git clone https://github.com/robinucar/FT_Tech_Test.git
+npm install
+```
+
+- Run npm start command to start the application.
+
+```
+npm start
+```
+
+- Go to http://localhost:3000/
+
+- Click Handlebars Templates
+  ![ Home page ](assest/home-page.png)
+
+- And see the result.
+  ![ Market Data ](assest/market-data.png)
+
+### How to run the test and see the test coverage.
+
+```
+npm test
+
+```
+
+![ Tests & Coverage ](assest/code_coverage.png)

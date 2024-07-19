@@ -22,27 +22,25 @@ header {
 }
 
 .daily-change.negative-change {
-  color: #dc7a7d; // Could not find the right color on Origami Color components.
+  color: #dc7a7d;
 }
 
 .daily-change.positive-change {
-  color: #8ca42f; //Could not find the right color on Origami Color components.
+  color: #8ca42f;
 }
 
 .o-typography-link {
   color: var(--o-colors-white-80);
   text-decoration: none;
-
-  &:hover,
-  &:focus {
-    color: var(--o-colors-white-80);
-    outline: 2px solid var(--o-colors-primary);
-    outline-offset: 2px;
-  }
-
-  &:hover {
-    color: var(--o-colors-white-80);
-  }
+}
+.o-typography-link:hover,
+.o-typography-link:focus {
+  color: var(--o-colors-white-80);
+  outline: 2px solid var(--o-colors-primary);
+  outline-offset: 2px;
+}
+.o-typography-link:hover {
+  color: var(--o-colors-white-80);
 }
 
 @media (max-width: 1050px) {

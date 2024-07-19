@@ -17,6 +17,7 @@ app.engine(
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.render('start');
@@ -45,7 +46,6 @@ app.get('/handlebars', async (req, res) => {
   try {
     const templateData = await dataController.getMarketData(res);
     res.render('handlebars/home', templateData);
-    console.log(templateData);
   } catch (error) {
     handleError(error, res);
   }
