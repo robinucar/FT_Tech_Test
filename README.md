@@ -207,10 +207,12 @@ npm start
 - Go to http://localhost:3000/
 
 - Click Handlebars Templates
+
   ![ Home page ](assest/home-page.png)
 
 - And see the result.
-  ![ Market Data ](assest/market-data.png)
+
+  ![ Market Data ](assest/market_data_ui.png)
 
 ### How to run the test and see the test coverage.
 

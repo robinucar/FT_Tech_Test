@@ -2,7 +2,7 @@ const ApiModel = require('../model/api-model');
 const { ValidationError, handleError } = require('../error/errors');
 require('dotenv').config();
 
-const getMarketData = async res => {
+const getMarketData = async (res) => {
   try {
     const url = process.env.FT_MARKET_API_URL;
     const params = process.env.FT_MARKET_SYMBOLS;

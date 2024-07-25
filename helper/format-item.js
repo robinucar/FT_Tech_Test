@@ -6,7 +6,7 @@ const nameMapping = {
   'ICE Brent Crude Oil Front Month': 'Brent Crude Oil',
 };
 
-const formatItem = item => {
+const formatItem = (item) => {
   const name = nameMapping[item.basic.name] || item.basic.name;
   let dailyChange = '';
   let isNegative = false;

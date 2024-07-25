@@ -1,12 +1,10 @@
 header {
   margin-top: 39px;
-  margin-bottom: 28px;
-}
+  margin-bottom: 28px; }
 
 .o-typography-wrapper {
   margin-left: 16px;
-  margin-right: 16px;
-}
+  margin-right: 16px; }
 
 .inline-list {
   display: flex;
@@ -14,50 +12,35 @@ header {
   padding: 0;
   list-style: none;
   justify-content: flex-start;
-  align-items: center;
-}
+  align-items: center; }
 
 .daily-change {
-  margin-left: 5px;
-}
+  margin-left: 5px; }
 
 .daily-change.negative-change {
-  color: #dc7a7d; // Could not find the right color on Origami Color components.
+  color: #dc7a7d;
   border: 1px solid #dc7a7d;
   padding: 0 7px;
   border-radius: 5px;
-  width: 50px;
-
-
-}
+  width: 50px; }
 
 .daily-change.positive-change {
-  color: #8ca42f; //Could not find the right color on Origami Color components.
+  color: #8ca42f;
   border: 1px solid #8ca42f;
   padding: 0 7px;
   border-radius: 5px;
-  width: 50px;
-
-}
+  width: 50px; }
 
 .o-typography-link {
   color: var(--o-colors-white-80);
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
+  text-decoration: none; }
+  .o-typography-link:hover, .o-typography-link:focus {
     color: var(--o-colors-white-80);
     outline: 2px solid var(--o-colors-primary);
-    outline-offset: 2px;
-  }
-
-  &:hover {
-    color: var(--o-colors-white-80);
-  }
-}
+    outline-offset: 2px; }
+  .o-typography-link:hover {
+    color: var(--o-colors-white-80); }
 
 @media (max-width: 1050px) {
   .o-ft-affiliate-ribbon {
-    min-height: 75px;
-  }
-}
+    min-height: 75px; } }
